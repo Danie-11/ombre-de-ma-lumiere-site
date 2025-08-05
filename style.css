@@ -1,5 +1,10 @@
 /* Général */
-body {
+body main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+}
+{
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #0c1b2e;
