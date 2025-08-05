@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
+<!-- Favicon 32x32 -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<!-- Favicon 64x64 -->
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>L'Ombre de Ta Réussite</title>
-  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="icon" href="ombredetareussite.jpg" type="image/png">
   <style>
     body {
       margin: 0;
@@ -13,47 +16,73 @@
       color: #f4e7c1;
     }
     header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em;
       background-color: #0c1b2e;
       border-bottom: 1px solid #cfa94a;
-      text-align: center;
-      padding: 1em 0;
     }
-    .logo {
-      height: 60px;
+    header img {
+      height: 50px;
+    }
+    .menu-btn {
+      font-size: 24px;
+      cursor: pointer;
+      color: #cfa94a;
+    }
+    nav {
+      display: none;
+      background-color: #11243c;
+      padding: 1em;
+    }
+    nav a {
+      display: block;
+      color: #f4e7c1;
+      text-decoration: none;
       margin-bottom: 0.5em;
     }
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      gap: 2em;
-      margin-top: 0.5em;
-      flex-wrap: wrap;
-    }
-    .nav-links a {
+    h1, h2 {
       color: #cfa94a;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1em;
-      transition: color 0.3s;
+      text-align: center;
     }
-    .nav-links a:hover {
-      color: #fff;
+    section {
+      padding: 2em 1.5em;
+      max-width: 800px;
+      margin: auto;
+    }
+    .pack {
+      background-color: #1a2c45;
+      margin: 1em 0;
+      padding: 1em;
+      border-left: 4px solid #cfa94a;
+    }
+    footer {
+      background-color: #11243c;
+      padding: 2em 1em;
+      color: #eee;
+      text-align: center;
+      font-size: 0.9em;
+    }
+    .highlight {
+      color: #cfa94a;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo L'Ombre de Ta Réussite" class="logo">
-    <div class="nav-links">
-      <a href="#">Accueil</a>
-      <a href="#services">Services Premium</a>
-      <a href="#confiance">Pourquoi me faire confiance ?</a>
-      <a href="#temoignages">Témoignages</a>
-      <a href="#contact">Contact</a>
-    </div></nav>  <section>
-    <p style="text-align:center;">Conciergerie administrative dédiée aux personnes ambitieuses</p>
+  <header <header style="text-align: center; padding: 1em 0;">
+  <img src="ombredetareussite.jpg" alt="Logo L'Ombre de Ta Réussite" style="max-width: 160px;">
+</header>
+  <nav id="menu" style="display: flex; justify-content: center; gap: 2em; padding-bottom: 1em;">
+  <a href="#services">Services Premium</a>
+  <a href="#confiance">Pourquoi me faire confiance ?</a>
+  <a href="#temoignages">Témoignages</a>
+  <a href="#contact">Contact</a>
+</nav>  <section>
+    <h1>L'Ombre de Ta Réussite</h1>
+    <p style="text-align:center;">Conciergerie administrative dédiée aux femmes ambitieuses</p>
     <h2>Ce que je fais pour vous</h2>
-    <p>Vous avez un business... mais trop de mails, de paperasse, de relances à faire ?<br>
+    <p style="text-align:center;">Vous avez un business... mais trop de mails, de paperasse, de relances à faire ?<br>
     Déléguez tout ce qui vous empêche de vous concentrer sur l'essentiel :</p>
     <ul>
       <li>✔ Emails</li>
@@ -61,9 +90,7 @@
       <li>✔ Appels & organisation</li>
       <li>✔ Dossiers administratifs pro et perso</li>
     </ul>
-  </section>
-
-  <section id="services">
+  </section>  <section id="services">
     <h2>Mes Services Premium</h2>
     <div class="pack">
       <h3>Pack Clarté – 249 €/mois</h3>
@@ -96,9 +123,7 @@
         <li>Rapport hebdo PDF</li>
       </ul>
     </div>
-  </section>
-
-  <section id="confiance">
+  </section>  <section id="confiance">
     <h2>Pourquoi me faire confiance ?</h2>
     <ul>
       <li>+7 ans d’expérience en gestion & organisation</li>
@@ -106,24 +131,25 @@
       <li>Confidentialité absolue</li>
       <li>Communication fluide & efficace</li>
     </ul>
-  </section>
-
-  <footer id="contact">
+  </section>  <section id="temoignages">
+    <h2>Témoignages</h2>
+    <p><em>“Depuis que j’ai confié mon administratif à Esther, j’ai enfin retrouvé du temps pour moi.”<br>
+    — Sophie, créatrice de marque</em></p>
+    <p><em>“Efficace, calme, réactive : c’est une pépite.”<br>
+    — Amina, thérapeute</em></p>
+  </section>  <footer id="contact">
+    <p><span class="highlight">WhatsApp :</span> +32 490 27 91 59</p>
     <p><span class="highlight">Email :</span> estherkasongoog@outlook.fr</p>
-    <p><a href="#" style="color:#cfa94a; text-decoration: underline;">Réservez votre appel découverte gratuit</a></p>
-    <p>&copy; 2025 L’Ombre de Ta Réussite. Tous droits réservés.</p>
-    <p>
-  <a href="mentions-legales.html" target="_blank" style="color:#cfa94a; style="color:#cfa94a;">Mentions légales</a>
-  <a href="politique-confidentialite.html" target="_blank" style="color:#cfa94a;">Politique de confidentialité</a>
-   <a href="condition-generale.html" target="_blank"style="color:#cfa94a;">Conditions Générales</a> 
+    <p><a href="#" style="color:#cfa94a; text-decoration: underline;"<p>
+  <a href="https://wa.me/32490219159" target="_blank" style="color: #25D366; font-weight: bold; text-decoration: underline;">
+    📞 Réservez votre appel découverte gratuit
+  </a>
     </p>
- </footer>
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('menu');
-      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
-</body>
+    <p>&copy; 2025 L’Ombre de Ta Réussite. Tous droits réservés.</p>
+    <p style="font-size: 0.9em; margin-top: 1em;">
+  <a href="#mentions-legales" style="color:#cfa94a; text-decoration: underline;">Mentions légales</a> ·
+  <a href="#politique-confidentialite" style="color:#cfa94a; text-decoration: underline;">Politique de confidentialité</a>
+    </p>
+  </footer>
+</section></body>
 </html>
