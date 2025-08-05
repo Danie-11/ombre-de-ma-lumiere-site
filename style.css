@@ -1,32 +1,100 @@
-/* ---------- STYLE GLOBAL ---------- */ body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #0c1b2e; color: #f4e7c1; padding: 0; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0c1b2e;
+  color: #f4e7c1;
+}
 
-/* ---------- HEADER ---------- */ header { display: flex; justify-content: space-between; align-items: center; padding: 1em; background-color: #0c1b2e; border-bottom: 1px solid #cfa94a; }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #0c1b2e;
+  border-bottom: 1px solid #cfa94a;
+}
 
-header img { height: 50px; }
+header img {
+  height: 50px;
+}
 
-.menu-btn { font-size: 24px; cursor: pointer; color: #f4e7c1; }
+.menu-btn {
+  font-size: 24px;
+  cursor: pointer;
+  color: #cfa94a;
+}
 
-/* ---------- MENU NAVIGATION ---------- */ nav { display: none; background-color: #11243c; padding: 1em; text-align: center; gap: 2em; }
+nav {
+  display: none;
+  background-color: #11243c;
+  padding: 1em;
+}
 
-nav a { display: inline-block; color: #f4e7c1; text-decoration: none; margin: 0 10px; }
+nav a {
+  display: block;
+  color: #f4e7c1;
+  text-decoration: none;
+  margin-bottom: 0.5em;
+}
 
-nav a:hover { color: #cfa94a; text-decoration: underline; }
+h1, h2 {
+  text-align: center;
+  color: #cfa94a;
+}
 
-/* ---------- CONTENU ---------- */ h1, h2, h3 { text-align: center; color: #f4e7c1; }
+h1 {
+  font-size: 2.3em;
+  letter-spacing: 1px;
+  margin-top: 1em;
+}
 
-p { text-align: center; margin: 1em auto; max-width: 700px; line-height: 1.6em; }
+h2 {
+  font-size: 1.4em;
+}
 
-ul { list-style-type: none; padding: 0; text-align: center; }
+h3 {
+  color: #f4e7c1;
+  font-size: 1.2em;
+}
 
-li::before { content: "\2713\0020"; color: #cfa94a; font-weight: bold; }
+section {
+  padding: 2em 1.5em;
+  max-width: 800px;
+  margin: auto;
+}
 
-/* ---------- TÉMOIGNAGES ---------- */ .avis blockquote { background: #1f1a26; border-left: 5px solid #cfa94a; margin: 1em auto; padding: 1em; color: #eee; font-style: italic; border-radius: 10px; max-width: 600px; }
+.pack {
+  background-color: #1a2c45;
+  margin: 1em 0;
+  padding: 1em;
+  border-left: 4px solid #cfa94a;
+}
 
-.avis footer { text-align: right; color: #cfa94a; font-weight: bold; margin-top: 0.5em; }
+footer {
+  background-color: #11243c;
+  padding: 2em 1em;
+  color: #eee;
+  text-align: center;
+  font-size: 0.9em;
+}
 
-/* ---------- BOUTON RETOUR ACCUEIL ---------- */ .retour-accueil { display: inline-block; margin: 2em auto; padding: 10px 20px; background-color: #cfa94a; color: #0c1b2e; font-weight: bold; text-decoration: none; border-radius: 8px; transition: background-color 0.3s ease; }
+.highlight {
+  color: #cfa94a;
+}
 
-.retour-accueil:hover { background-color: #f4e7c1; color: #0c1b2e; }
+.avis blockquote {
+  background: #1f1a26;
+  border-left: 5px solid #cfa94a;
+  margin: 1em 0;
+  padding: 1em;
+  color: #eee;
+  font-style: italic;
+  border-radius: 10px;
+}
 
-/* ---------- FOOTER ---------- */ footer { background-color: #0c1b2e; padding: 1em; text-align: center; color: #aaa; font-size: 0.9em; border-top: 1px solid #cfa94a; }
-
+.avis footer {
+  text-align: right;
+  color: #cfa94a;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
