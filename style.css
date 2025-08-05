@@ -98,3 +98,53 @@ footer {
   font-weight: bold;
   margin-top: 0.5em;
 }
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0c1b2e;
+  padding: 1em 2em;
+  border-bottom: 1px solid #cfa94a;
+  flex-wrap: wrap;
+}
+
+.nav-logo {
+  height: 50px;
+}
+
+.nav-links a {
+  color: #f4e7c1;
+  text-decoration: none;
+  margin: 0 1em;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #cfa94a;
+}
+.hero-header {
+  background-color: #0c1b2e;
+  text-align: center;
+  padding: 2em 1em 1em;
+}
+
+.hero-header h1 {
+  color: #f4e7c1;
+  font-size: 2.4em;
+  font-weight: bold;
+  line-height: 1.2em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.hero-header h1 span {
+  color: #cfa94a;
+}
+
+.subtitle {
+  color: #cfa94a;
+  letter-spacing: 2px;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+}
