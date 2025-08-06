@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>L’Ombre de Ta Réussite</title>
   <link rel="icon" href="favicon-32x32.png" type="image/png" />
+  <link rel="icon" href="favicon-64x64.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -12,7 +13,20 @@
       background-color: #0d1b2a;
       color: #f0f0f0;
       line-height: 1.6;
-    }.logo {
+    }
+    
+  @keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+    }
+    
+.container {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+  .logo {
   display: block;
   margin: auto;
   max-width: 250px;
@@ -20,7 +34,7 @@
   transition: transform 0.3s ease;
 }
 
-.logo:hover {
+    .logo:hover {
   transform: scale(1.05);
 }
 
@@ -33,7 +47,7 @@
   padding: 0.5em 1em;
   cursor: pointer;
   }
-
+    
 nav {
   display: flex;
   flex-direction: row;
@@ -272,11 +286,11 @@ footer a {
     <p style="text-align:center;">Vous avez un business... mais trop de mails, de paperasse, de relances à faire ?<br />
     Déléguez tout ce qui vous empêche de vous concentrer sur l'essentiel :</p>
               <ul class="centered-list">
-      <li>    Emails</li>
-      <li>    Documents & classement</li>
-      <li>    Appels & organisation</li>
-      <li>    Dossiers administratifs pro et perso</li>
-              </ul></section>  <section id="services">
+      <li>Emails</li>
+      <li>Documents & classement</li>
+      <li>Appels & organisation</li>
+      <li>Dossiers administratifs pro et perso</li>
+      </ul></section>  <section id="services">
     <h1>Mes Services Premium</h1>
     <div class="services-container">
       <div class="pack">
@@ -314,22 +328,24 @@ footer a {
   </section>  <section id="confiance">
     <h2>Pourquoi me faire confiance ?</h2>
     <ul class="centered-list">
-      <li>    +7 ans d’expérience en gestion & organisation</li>
-      <li>    Approche humaine, rassurante et pro</li>
-      <li>    Confidentialité absolue</li>
-      <li>    Communication fluide & efficace</li>
+      <li>+7 ans d’expérience en gestion & organisation</li>
+      <li>Approche humaine, rassurante et pro</li>
+      <li>Confidentialité absolue</li>
+      <li>Communication fluide & efficace</li>
     </ul>
   </section>  <footer id="contact">
     <p><strong>WhatsApp :</strong> +32 490 27 91 59</p>
     <p><strong>Email :</strong> estherkasongoog@outlook.fr</p>
-    <p>
-      <a href="https://wa.me/32490219159">📞 Réservez votre appel découverte gratuit</a>
-    </p>
+    <p><a href="https://wa.me/32490219159" target="_blank">
+  <img src="whatsapp-gold.png" alt="WhatsApp" style="height: 20px; vertical-align: middle; margin-right: 8px;">
+  Réservez votre appel découverte gratuit
+    </a>
+  
     <p style="font-size: 0.9em; margin-top: 1em;">
       <a href="mentions-legales.html">Mentions légales</a>
-      <a href="politique-confidentialite.html">Politique de confidentialité</a>
       <a href="condition-generale.html">Conditions générales</a>
-    </p>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      </p>
     <p style="margin-top: 20px;">&copy; 2025 L’Ombre de Ta Réussite. Tous droits réservés.</p>
   </footer>  <script>
     function toggleMenu() {
