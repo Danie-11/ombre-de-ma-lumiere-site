@@ -66,6 +66,10 @@ nav a:hover {
   color: #d4af37;
 }
 
+    nav a {
+    font-size: 1rem;
+  }
+
 @media (max-width: 768px) {
   nav {
     display: none;
@@ -122,6 +126,7 @@ ul li::before {
   text-align: left;
   margin-left: 20px;
   font-weight: bold;
+  font-size: 0.95rem;
 }
 
 .services-container {
@@ -144,11 +149,25 @@ ul li::before {
   box-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
 }
 
+     .pack {
+    padding: 10px;
+  }
+
 .pack h3 {
   margin-top: 0;
   color: #fff;
 }
 
+    footer p,
+footer a {
+  font-size: 0.95rem;
+}
+    
+    @media (max-width: 480px) {
+  section {
+    padding: 20px 15px;
+  }
+  
 .cta-button {
   display: inline-block;
   margin: 30px auto;
@@ -189,13 +208,99 @@ footer a {
   .pack {
     width: 30%;
   }
+
+   html {
+  font-size: 16px;
+}
+
+   h1, h2 {
+    font-size: 1.2rem;
+  }
 }
 
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Contenu ici -->
+  <img src="ombredetareussite.jpg" alt="Logo L'Ombre de Ta Réussite" class="logo" />
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+  <nav id="mainMenu">
+    <a href="#services">Services Premium</a>
+    <a href="#confiance">Pourquoi me faire confiance ?</a>
+    <a href="temoignages.html">Témoignages</a>
+    <a href="#contact">Contact</a>
+    
+  </nav>  <section>
+    <h1>L'Ombre de Ta Réussite</h1>
+    <p style="text-align:center;">Conciergerie administrative dédiée aux personnes ambitieuses</p>
+    <h1>Ce que je fais pour vous</h1>
+    <p style="text-align:center;">Vous avez un business... mais trop de mails, de paperasse, de relances à faire ?<br />
+    Déléguez tout ce qui vous empêche de vous concentrer sur l'essentiel :</p>
+    <ul class="centered-list">
+      <li>Emails</li>
+      <li>Documents & classement</li>
+      <li>Appels & organisation</li>
+      <li>Dossiers administratifs pro et perso</li>
+    </ul></section>  <section id="services">
+    <h1>Mes Services Premium</h1>
+    <div class="services-container">
+      <div class="pack">
+        <h3>Pack Clarté – 249 €/mois</h3>
+        <ul>
+          <li>5h d’assistance mensuelle</li>
+          <li>Tri et rédaction d’e-mails</li>
+          <li>Classement de documents</li>
+          <li>Suivi de planning pro</li>
+          <li>1 appel stratégique/mois</li>
+        </ul>
+      </div>
+      <div class="pack">
+        <h3>Pack Ambition – 449 €/mois</h3>
+        <ul>
+          <li>10h/mois</li>
+          <li>Toutes les prestations du pack Clarté</li>
+          <li>Prise d’appels entrants & relances</li>
+          <li>Rédaction de lettres officielles</li>
+          <li>2 points hebdo par WhatsApp</li>
+        </ul>
+      </div>
+      <div class="pack">
+        <h3>Pack Équilibre – 799 €/mois</h3>
+        <ul>
+          <li>20h/mois</li>
+          <li>Toutes les prestations précédentes</li>
+          <li>Tâches personnelles (réservations, etc.)</li>
+          <li>Traitement prioritaire</li>
+          <li>Accès WhatsApp illimité</li>
+          <li>Rapport hebdo PDF</li>
+        </ul>
+      </div>
+    </div>
+  </section>  <section id="confiance">
+    <h2>Pourquoi me faire confiance ?</h2>
+    <ul class="centered-list">
+      <li>+7 ans d’expérience en gestion & organisation</li>
+      <li>Approche humaine, rassurante et pro</li>
+      <li>Confidentialité absolue</li>
+      <li>Communication fluide & efficace</li>
+    </ul>
+  </section>  <footer id="contact">
+    <p><strong>WhatsApp :</strong> +32 490 27 91 59</p>
+    <p><strong>Email :</strong> estherkasongoog@outlook.fr</p>
+    <p>
+      <a href="https://wa.me/32490219159">📞 Réservez votre appel découverte gratuit</a>
+    </p>
+    <p style="font-size: 0.9em; margin-top: 1em;">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="condition-generale.html">Conditions générales</a>
+    </p>
+    <p style="margin-top: 20px;">&copy; 2025 L’Ombre de Ta Réussite. Tous droits réservés.</p>
+  </footer>  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mainMenu');
+      menu.classList.toggle('show');
+    }
   </div>
 </body>
 </html>
