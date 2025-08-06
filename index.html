@@ -1,7 +1,5 @@
 <!DOCTYPE html><html lang="fr">
 <head>
-  <link rel="icon" type="favicon-32x32.png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="favicon-64x64.png" sizes="64x64" href="favicon-64x64.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>L’Ombre de Ta Réussite</title>
@@ -103,19 +101,7 @@ ul {
   text-align: center;
 }
 
-ul.centered-list {
-  display: inline-block;
-  text-align: left;
-  list-style-position: inside;
-}
-
-ul li::before {
-  content: "🔸 ";
-  color: #d4af37;
-  margin-right: 8px;
-  display: inline-block;
-}
-    .centered-list {
+.centered-list {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,10 +110,19 @@ ul li::before {
 
 .centered-list li {
   max-width: 90%; 
-  text-align: justify; center;
-  line-height: 1.5;
-  margin-bottom: 0.6em;
-  word-spacing: 0.02em;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  word-spacing: 0.04em;
+  margin-bottom: 0.8em;
+}
+
+ul li::before {
+  content: "\1F538 ";
+  color: #d4af37;
+  margin-right: 8px;
+  display: inline-block;
 }
 
 .services-container {
@@ -258,7 +253,7 @@ footer a {
   </section>  <section id="confiance">
     <h2>Pourquoi me faire confiance ?</h2>
     <ul class="centered-list">
-    <li>+7 ans d’expérience en gestion & organisation</li>
+      <li>+7 ans d’expérience en gestion & organisation</li>
       <li>Approche humaine, rassurante et pro</li>
       <li>Confidentialité absolue</li>
       <li>Communication fluide & efficace</li>
