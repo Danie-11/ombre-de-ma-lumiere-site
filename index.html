@@ -113,6 +113,19 @@ ul li::before {
   margin-right: 8px;
   display: inline-block;
 }
+    .centered-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centre la liste */
+  padding-left: 0;
+}
+
+.centered-list li {
+  max-width: 90%;      /* limite la largeur pour que le texte ne soit pas étiré */
+  text-align: justify; /* justifie le texte à l’intérieur */
+  line-height: 1.6;
+  margin-bottom: 0.6em;
+}
 
 .services-container {
   display: flex;
