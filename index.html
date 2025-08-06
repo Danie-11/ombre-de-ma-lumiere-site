@@ -6,6 +6,50 @@
   <title>L’Ombre de Ta Réussite</title>
   <link rel="icon" href="favicon-32.png" type="image/png" />
   <style>
+  .menu-toggle {
+    display: none;
+    background-color: #0d1b2a;
+    color: #fff;
+    border: none;
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+    cursor: pointer;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    padding: 1em;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: #0d1b2a;
+      padding: 1em 0;
+    }
+
+    nav.show {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -59,9 +103,11 @@
     ul {
       list-style-type: none;
       padding: 0;
+      text-align: center;
     }
 
     ul li::before {
+      margin-bottom: 8px;
       content: "✔️ ";
       color: #d4af37;
     }
@@ -115,25 +161,27 @@
 <body>
 
   <img src="ombredetareussite.jpg" alt="Logo L'Ombre de Ta Réussite" class="logo" />
-
-  <nav id="menu">
-    <a href="#services">Services Premium</a>
-    <a href="#confiance">Pourquoi me faire confiance ?</a>
-    <a href="temoignages.html" target="_blank" rel="noopener noreferrer">Témoignages</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+  
+  <nav id="mainMenu">
+  <a href="#services">Services Premium</a>
+  <a href="#confiance">Pourquoi me faire confiance ?</a>
+  <a href="temoignages.html">Témoignages</a>
+  <a href="#contact">Contact</a>
+</nav>
 
   <section>
-    <p style="text-align:center;" class="subtitle">Conciergerie administrative dédiée aux femmes ambitieuses</p>
+    <p style="text-align:center;" class="subtitle">Conciergerie administrative dédiée aux personnes ambitieuses</p>
+    
     <h1>Ce que je fais pour vous</h1>
     <p style="text-align:center;">Vous avez un business... mais trop de mails, de paperasse, de relances à faire ?<br />
       Déléguez tout ce qui vous empêche de vous concentrer sur l'essentiel :
     </p>
     <ul>
-      <li>Emails</li>
-      <li>Documents & classement</li>
-      <li>Appels & organisation</li>
-      <li>Dossiers administratifs pro et perso</li>
+           <li>Emails</li>
+           <li>Documents & classement</li>
+           <li>Appels & organisation</li>
+           <li>Dossiers administratifs pro et perso</li>
     </ul>
   </section>
 
@@ -197,6 +245,12 @@
     </p>
     <p style="margin-top: 20px;">&copy; 2025 L’Ombre de Ta Réussite. Tous droits réservés.</p>
   </footer>
-
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mainMenu');
+    menu.classList.toggle('show');
+  }
+  
+</script>
 </body>
 </html>
