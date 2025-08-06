@@ -24,6 +24,16 @@
   transform: scale(1.05);
 }
 
+.menu-toggle {
+  display: none;
+  background-color: #0d1b2a;
+  color: #fff;
+  border: none;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  }
+
 nav {
   display: flex;
   flex-direction: row;
@@ -46,15 +56,6 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
-  .menu-toggle {
-  display: none;
-  background-color: #0d1b2a;
-  color: #fff;
-  border: none;
-  font-size: 1.5em;
-  padding: 0.5em 1em;
-  cursor: pointer;
-}
 nav {
     display: flex;
     flex-direction: column;
@@ -135,7 +136,7 @@ ul {
 ul li::before {
   content: "✔";
   color: #d4af37;
-  margin-right: 8px;
+  margin-right: 50px;
   display: inline-block;
 }
 
@@ -202,9 +203,9 @@ footer a {
   max-width: 700px;
   text-align: left;
   line-height: 1.5;
-  padding-left: 20px;
-  margin-left: 60px;
-  margin-right: 60px;
+  padding-left: auto;
+  margin-left: 0px;
+  margin-right: 80px;
   margin-bottom: 0.5em;
 }
   .services-container {
