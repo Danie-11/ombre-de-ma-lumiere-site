@@ -24,16 +24,6 @@
   transform: scale(1.05);
 }
 
-.menu-toggle {
-  display: none;
-  background-color: #0d1b2a;
-  color: #fff;
-  border: none;
-  font-size: 1.5em;
-  padding: 0.5em 1em;
-  cursor: pointer;
-}
-
 nav {
   display: flex;
   flex-direction: row;
@@ -56,8 +46,17 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+  .menu-toggle {
+  display: none;
+  background-color: #0d1b2a;
+  color: #fff;
+  border: none;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
 nav {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #09121d;
