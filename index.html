@@ -6,49 +6,49 @@
   <title>L’Ombre de Ta Réussite</title>
   <link rel="icon" href="favicon-32.png" type="image/png" />
   <style>
-  .menu-toggle {
-    display: none;
-    background-color: #0d1b2a;
-    color: #fff;
-    border: none;
-    font-size: 1.5em;
-    padding: 0.5em 1em;
-    cursor: pointer;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5em;
-    padding: 1em;
-  }
-
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  @media (max-width: 768px) {
-    nav {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      background-color: #0d1b2a;
-      padding: 1em 0;
-    }
-
-    nav.show {
-      display: flex;
-    }
-
     .menu-toggle {
-      display: block;
-      margin: 0 auto;
+      display: none;
+      background-color: #0d1b2a;
+      color: #fff;
+      border: none;
+      font-size: 1.5em;
+      padding: 0.5em 1em;
+      cursor: pointer;
     }
-  }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5em;
+      padding: 1em;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #0d1b2a;
+        padding: 1em 0;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        margin: 0 auto;
+      }
+    }
 
     body {
       margin: 0;
@@ -107,15 +107,16 @@
     }
 
     ul.centered-list {
-  display: inline-block;
-  text-align: left;
-  list-style-position: inside;
-}
-    
+      display: inline-block;
+      text-align: left;
+      list-style-position: inside;
+    }
+
     ul li::before {
-      margin-bottom: 8px;
-      content: "🔸;
+      content: "🔸 ";
       color: #d4af37;
+      margin-right: 8px;
+      display: inline-block;
     }
 
     .services-container {
@@ -165,16 +166,15 @@
 </head>
 
 <body>
-
   <img src="ombredetareussite.jpg" alt="Logo L'Ombre de Ta Réussite" class="logo" />
-<button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
-  
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
   <nav id="mainMenu">
-  <a href="#services">Services Premium</a>
-  <a href="#confiance">Pourquoi me faire confiance ?</a>
-  <a href="temoignages.html">Témoignages</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <a href="#services">Services Premium</a>
+    <a href="#confiance">Pourquoi me faire confiance ?</a>
+    <a href="temoignages.html">Témoignages</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <section>
     <h1>L'Ombre de Ta Réussite</h1>    
@@ -183,11 +183,11 @@
     <p style="text-align:center;">Vous avez un business... mais trop de mails, de paperasse, de relances à faire ?<br />
       Déléguez tout ce qui vous empêche de vous concentrer sur l'essentiel :
     </p>
-    <ul>
-           <li>Emails</li>
-           <li>Documents & classement</li>
-           <li>Appels & organisation</li>
-           <li>Dossiers administratifs pro et perso</li>
+    <ul class="centered-list">
+      <li>Emails</li>
+      <li>Documents & classement</li>
+      <li>Appels & organisation</li>
+      <li>Dossiers administratifs pro et perso</li>
     </ul>
   </section>
 
@@ -230,7 +230,7 @@
 
   <section id="confiance">
     <h2>Pourquoi me faire confiance ?</h2>
-    <ul>
+    <ul class="centered-list">
       <li>+7 ans d’expérience en gestion & organisation</li>
       <li>Approche humaine, rassurante et pro</li>
       <li>Confidentialité absolue</li>
@@ -251,12 +251,12 @@
     </p>
     <p style="margin-top: 20px;">&copy; 2025 L’Ombre de Ta Réussite. Tous droits réservés.</p>
   </footer>
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('mainMenu');
-    menu.classList.toggle('show');
-  }
-  
-</script>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mainMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
