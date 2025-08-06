@@ -6,13 +6,15 @@
   <link rel="icon" href="favicon-32x32.png" type="image/png" />
   <style>
     body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #0d1b2a;
-      color: #f0f0f0;
-      line-height: 1.6;
-      animation: fadeIn 1.5s ease-in;
-    }@keyframes fadeIn {
+      body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0d1b2a;
+  color: #f0f0f0;
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease-in;
+}
+@keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
@@ -182,22 +184,25 @@ ul li::before {
 }
 
 footer {
-  background-color: #09121d;
+  background-color: #08111e; /* même bleu foncé que ton menu */
   color: #f0f0f0;
   text-align: center;
   padding: 20px;
+  width: 100%;
 }
 
-   footer a {
+footer p, footer a {
+  font-size: 0.95rem;
+  margin: 0 auto;
+  display: block;
+}
+
+ footer a {
   color: #cfa94a;
   margin: 0 10px;
   text-decoration: underline;
 }
-   footer p,
-footer a {
-  font-size: 0.95rem;
-}
-
+   
 @media (min-width: 768px) {
   .services-container {
     flex-direction: row;
