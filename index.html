@@ -1,248 +1,304 @@
-<!DOCTYPE html><html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>L'ombre de ma lumière</title>
+  <title>L’Ombre de ma lumière</title>
   <link rel="icon" href="favicon-32x32.png" type="image/png" />
   <link rel="icon" href="favicon-64x64.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #0d1b2a;
       color: #f0f0f0;
       line-height: 1.6;
-    }@keyframes fadeInImage {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    }
 
-.container {
-  max-width: 950px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-.logo {
-  display: block;
-  margin: auto;
-  max-width: 250px;
-  padding-top: 20px;
-  transition: transform 0.3s ease;
-}
+    @keyframes fadeInImage {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-.logo:hover { transform: scale(1.05); }
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-.menu-toggle {
-  display: none;
-  background-color: #0d1b2a;
-  color: #fff;
-  border: none;
-  font-size: 1.5em;
-  padding: 0.5em 1em;
-  cursor: pointer;
-}
+    .logo {
+      display: block;
+      margin: auto;
+      max-width: 250px;
+      padding-top: 20px;
+      transition: transform 0.3s ease;
+    }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5em;
-  padding: 1em;
-  background-color: #091420;
-}
+    .logo:hover {
+      transform: scale(1.05);
+    }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
+    .menu-toggle {
+      display: none;
+      background-color: #0d1b2a;
+      color: #fff;
+      border: none;
+      font-size: 1.5em;
+      padding: 0.5em 1em;
+      cursor: pointer;
+    }
 
-nav a:hover { color: #d4af37; }
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5em;
+      padding: 1em;
+      background-color: #091420;
+    }
 
-@media (max-width: 768px) {
-  nav { display: none; flex-direction: column; align-items: center; background-color: #09121d; padding: 1em 0; }
-  nav.show { display: flex; }
-  .menu-toggle { display: block; margin: 0 auto; }
-}
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-header, section { text-align: center; padding: 30px 20px; max-width: 800px; margin: auto; }
+    nav a:hover {
+      color: #d4af37;
+    }
 
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  color: #d4af37;
-}
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #09121d;
+        padding: 1em 0;
+      }
 
-h1 { font-size: 1.5rem; }
-h2, h3 { font-size: 1.125rem; }
+      nav.show {
+        display: flex;
+      }
 
-ul { list-style-type: none; padding: 0; text-align: center; }
+      .menu-toggle {
+        display: block;
+        margin: 0 auto;
+      }
+    }
 
-.centered-list { display: flex; flex-direction: column; align-items: center; }
+    header {
+      text-align: center;
+      padding: 20px;
+    }
 
-.centered-list li {
-  text-align: left;
-  margin-bottom: 0.5em;
-}
+    section {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
 
-@media (max-width: 768px) {
-  .centered-list { align-items: flex-start; }
-  .centered-list li { text-align: left; }
-}
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: #d4af37;
+      text-align: center;
+    }
 
-ul li::before {
-  content: "✔";
-  color: #d4af37;
-  margin-right: 10px;
-  display: inline-block;
-}
+    h1 { font-size: 1.5rem; }
+    h2, h3 { font-size: 1.125rem; }
 
-.services-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 20px;
-}
+    ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
 
-.pack {
-  background-color: #1b263b;
-  padding: 15px;
-  border-left: 4px solid #d4af37;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .centered-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-.pack:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
-}
+    .centered-list li {
+      text-align: left;
+      margin-bottom: 0.5em;
+    }
 
-.pack h3 { margin-top: 0; color: #fff; text-align: center; }
+    ul li::before {
+      content: "✔";
+      color: #d4af37;
+      margin-right: 50px;
+      display: inline-block;
+    }
 
-.cta-button {
-  display: inline-block;
-  margin: 30px auto;
-  padding: 15px 25px;
-  background-color: #d4af37;
-  color: #0d1b2a;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 18px;
-  text-align: center;
-  transition: background 0.3s;
-}
+    .services-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
 
-.cta-button:hover { background-color: #f1c857; }
+    .pack {
+      background-color: #1b263b;
+      padding: 15px;
+      border-left: 4px solid #d4af37;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.fade-in-image, .illustration {
-  display: block;
-  margin: 20px auto;
-  max-width: 280px;
-  border-radius: 10px;
-  animation: fadeInImage 1.5s ease forwards;
-}
+    .pack:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
+    }
 
-footer {
-  background-color: #09121d;
-  color: #f0f0f0;
-  text-align: center;
-  padding: 20px;
-}
+    .pack h3 {
+      margin-top: 0;
+      color: #fff;
+      text-align: center;
+    }
 
-.legal-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
+    .cta-button {
+      display: inline-block;
+      margin: 30px auto;
+      padding: 15px 25px;
+      background-color: #d4af37;
+      color: #0d1b2a;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      text-align: center;
+      transition: background 0.3s;
+    }
 
-.legal-links a {
-  display: block;
-  text-decoration: underline;
-  color: #d4af37;
-  font-size: 14px;
-}
+    .cta-button:hover {
+      background-color: #f1c857;
+    }
 
-@media (max-width: 768px) {
-  .services-container { flex-direction: column; }
-  .legal-links { flex-direction: column; align-items: center; gap: 5px; }
-}
+    .fade-in-image {
+      max-width: 300px;
+      display: block;
+      margin: 20px auto 0;
+      border-radius: 10px;
+      opacity: 0;
+      animation: fadeInImage 1.5s ease forwards;
+    }
 
+    .illustration {
+      display: block;
+      margin: 20px auto;
+      max-width: 280px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #09121d;
+      color: #f0f0f0;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #cfa94a;
+      margin: 0 10px;
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      .centered-list li {
+        margin-left: 0px;
+        margin-right: 80px;
+      }
+
+      .services-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .pack {
+        width: 30%;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="horus.png" alt="horus" class="logo" />
+    <img src="horus.jpg" alt="Logo horus" class="logo" />
     <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
     <nav id="mainMenu">
-      <a href="#services">Services</a>
-      <a href="#confiance">Pourquoi moi ?</a>
+      <a href="#services">Services Premium</a>
+      <a href="#confiance">Pourquoi me faire confiance ?</a>
+      <a href="temoignages.html">Témoignages</a>
       <a href="#contact">Contact</a>
-    </nav><section>
-  <h1>L'ombre de ma lumière</h1>
-  <p>Service professionnel dédié aux entrepreneurs</p>
+    </nav>
 
-  <h2>Ce que je propose</h2>
-  <p>Déléguez ce qui vous ralentit pour rester concentré sur l’essentiel :</p>
-  <img src="debordee.png" alt="Illustration personne débordée" class="fade-in-image" />
-  <ul class="centered-list">
-    <li>Gestion des emails</li>
-    <li>Classement de documents</li>
-    <li>Organisation & appels</li>
+    <section>
+      <h1>L'Ombre de ma lumière</h1>
+      <p style="text-align:center;">Service professionnel dédié aux entrepreneurs</p>
+
+      <h1>Ce que je propose</h1>
+      <p style="text-align:center;">Déléguez ce qui vous ralentit pour rester concentré sur l’essentiel :</p>
+      <img src="debordee.png" alt="Illustration personne débordée" class="fade-in-image" />
+      <ul class="centered-list">
+        <li>Gestion des emails</li>  
+    <li>Classement de documents</li>  
+    <li>Organisation & appels</li>  
     <li>Dossiers administratifs</li>
-  </ul>
-</section>
+      </ul>
+    </section>
 
-<section id="services">
-  <h1>Formules disponibles</h1>
-  <div class="services-container">
-    <div class="pack">
-      <h3>Pack Essentiel</h3>
-      <ul>
-        <li>5h/mois d'assistance</li>
-        <li>Emails + documents</li>
+    <section id="services">
+      <h1>Mes Services Premium</h1>
+      <div class="services-container">
+        <div class="pack">
+          <h3>Pack Essentiel</h3>
+          <ul>
+             <li>5h/mois d'assistance</li>  
+        <li>Emails + documents</li>  
         <li>1 appel stratégique</li>
-      </ul>
-    </div>
-    <div class="pack">
-      <h3>Pack Pro</h3>
-      <ul>
-        <li>10h/mois</li>
-        <li>Appels entrants + relances</li>
+          </ul>
+        </div>
+        <div class="pack">
+          <h3>Pack Pro</h3>
+          <ul>
+            <li>10h/mois</li>  
+        <li>Appels entrants + relances</li>  
         <li>Suivi WhatsApp</li>
-      </ul>
-    </div>
-    <div class="pack">
-      <h3>Pack Premium</h3>
-      <ul>
-        <li>20h/mois + priorisation</li>
-        <li>Tâches personnelles</li>
+          </ul>
+        </div>
+        <div class="pack">
+          <h3>Pack Premium</h3>
+          <ul>
+             <li>20h/mois + priorisation</li>  
+        <li>Tâches personnelles</li>  
         <li>Rapport PDF</li>
-      </ul>
-    </div>
-  </div>
-</section>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<section id="confiance">
-  <h2>Pourquoi me faire confiance ?</h2>
-  <img src="confiance.png" alt="Professionnelle fiable" class="illustration" />
-  <ul class="centered-list">
-    <li>+7 ans d’expérience</li>
-    <li>Approche humaine & pro</li>
-    <li>Confidentialité garantie</li>
+    <section id="confiance">
+      <h2>Pourquoi me faire confiance ?</h2>
+      <img src="confiance.png" alt="Femme de confiance souriante" class="illustration" />
+      <ul class="centered-list">
+        <li>+7 ans d’expérience</li>  
+    <li>Approche humaine & pro</li>  
+    <li>Confidentialité garantie</li>  
     <li>Communication fluide</li>
-  </ul>
-</section>
+      </ul>
+    </section>
 
- <footer id="contact">
-      <p><strong>WhatsApp :</strong> 33749461434"</p>
-      <p><strong>Email :</strong> contact@eternaglow.com</p>
+    <footer id="contact">
+      <p><strong>WhatsApp :</strong> +33749461434</p>
+      <p><strong>Email :</strong>contact@eternaglow.com</p>
       <p>
         <a href="https://wa.me/33749461434" target="_blank">
           <img src="whatsapp-gold.png" alt="WhatsApp" style="height: 20px; vertical-align: middle; margin-right: 8px;">
@@ -252,13 +308,18 @@ footer {
       <p style="font-size: 0.9em; margin-top: 1em;">
         <a href="#"mentions-legales.html">Mentions légales</a>
         <a href="#"condition-generale.html">Conditions générales</a>
-        <a href="#"politique-confidentialite.html">Politique de confidentialité</a></p>
-      <p style="margin-top: 20px;">&Site miroir inspiré par <a href="https://eternaworld.github.io/eternaweb-site/" target="_blank">EternaWeb</a> – modèle "</p>
-</footer>
- </div>  <script>
+        <a href="#"politique-confidentialite.html">Politique de confidentialité</a>
+      </p>
+      <p style="margin-top: 20px;">site miroirinspirépar <a href="www.eternaweb.fr" target= _blank">EternaWeb</a> – modèle "L’ombre de ma lumière"
+      </p>
+    </footer>
+  </div>
+
+  <script>
     function toggleMenu() {
       const menu = document.getElementById('mainMenu');
       menu.classList.toggle('show');
     }
-  </script></body>
+  </script>
+</body>
 </html>
