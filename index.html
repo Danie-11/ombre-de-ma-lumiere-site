@@ -132,6 +132,26 @@
       margin-bottom: 0.5em;
     }
 
+    .centered-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.centered-list li {
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .centered-list {
+    align-items: flex-start;
+  }
+
+  .centered-list li {
+    text-align: left;
+  }
+  
     ul li::before {
       content: "✔";
       color: #d4af37;
@@ -226,6 +246,32 @@
       .pack {
         width: 30%;
       }
+
+      .legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* espace entre les liens */
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Liens stylisés */
+.legal-links a {
+  display: block;
+  text-decoration: underline;
+  color: #d4af37;
+  font-size: 14px;
+}
+
+/* Sur mobile : un lien par ligne */
+@media (max-width: 768px) {
+  .legal-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+}
     }
   </style>
 </head>
