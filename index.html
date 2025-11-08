@@ -159,7 +159,7 @@
 
 .pack:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.25);
 }
 
 .pack h3 {
@@ -168,19 +168,21 @@
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 1.1rem;
+  text-align: center;
 }
 
-/* Liste centrée */
+/* Liste : ✓ à gauche, texte centré sous le titre */
 .pack ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  display: inline-block; /* permet de centrer le groupe entier */
+  text-align: left; /* garde les ✓ et texte bien alignés */
 }
 
 .pack li {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.6rem;
   color: #f5f5f5;
   font-size: 0.95rem;
