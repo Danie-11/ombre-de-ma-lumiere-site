@@ -5,298 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>L’Ombre de ma lumière</title>
   <link rel="icon" href="favicon-32x32.png" type="image/png" />
-  <link rel="icon" href="favicon-64x64.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d1b2a;
-      color: #f0f0f0;
-      line-height: 1.6;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeInImage {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .container {
-      max-width: 950px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .logo {
-      display: block;
-      margin: auto;
-      max-width: 250px;
-      padding-top: 20px;
-      transition: transform 0.3s ease;
-    }
-
-    .logo:hover {
-      transform: scale(1.05);
-    }
-
-    .menu-toggle {
-      display: none;
-      background-color: #0d1b2a;
-      color: #fff;
-      border: none;
-      font-size: 1.5em;
-      padding: 0.5em 1em;
-      cursor: pointer;
-    }
-
-    nav {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5em;
-      padding: 1em;
-      background-color: #091420;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #d4af37;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background-color: #09121d;
-        padding: 1em 0;
-      }
-
-      nav.show {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-        margin: 0 auto;
-      }
-    }
-
-    header {
-      text-align: center;
-      padding: 20px;
-    }
-
-    section {
-      padding: 30px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-      color: #d4af37;
-      text-align: center;
-    }
-
-    h1 { font-size: 1.5rem; }
-    h2, h3 { font-size: 1.125rem; }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-      text-align: center;
-    }
-
-    .centered-list {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .centered-list li {
-      text-align: left;
-      margin-bottom: 0.5em;
-    }
-    
-.services-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 20px;
-  align-items: center;
-}
-
-.pack {
-  background-color: #1b263b;
-  padding: 25px 20px;
-  border: 1px solid #d4af37;
-  border-radius: 12px;
-  text-align: center;
-  width: 100%;
-  max-width: 280px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.pack:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 18px rgba(212, 175, 55, 0.25);
-}
-
-.pack h3 {
-  color: #d4af37;
-  margin-bottom: 1rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-align: center;
-}
-
-/* Liste : ✓ à gauche, texte centré sous le titre */
-.pack ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: inline-block; /* permet de centrer le groupe entier */
-  text-align: left; /* garde les ✓ et texte bien alignés */
-}
-
-.pack li {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: #f5f5f5;
-  font-size: 0.95rem;
-  line-height: 1.8;
-}
-
-/* Desktop – disposition horizontale */
-@media (min-width: 768px) {
-  .services-container {
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .pack {
-    flex: 1 1 30%;
-  }
-}
-  
-    .cta-button {
-      display: inline-block;
-      margin: 30px auto;
-      padding: 15px 25px;
-      background-color: #d4af37;
-      color: #0d1b2a;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 18px;
-      text-align: center;
-      transition: background 0.3s;
-    }
-
-    .cta-button:hover {
-      background-color: #f1c857;
-    }
-
-    .fade-in-image {
-      max-width: 300px;
-      display: block;
-      margin: 20px auto 0;
-      border-radius: 10px;
-      opacity: 0;
-      animation: fadeInImage 1.5s ease forwards;
-    }
-
-    .illustration {
-      display: block;
-      margin: 20px auto;
-      max-width: 280px;
-      border-radius: 10px;
-    }
-
-    footer {
-      background-color: #09121d;
-      color: #f0f0f0;
-      text-align: center;
-      padding: 20px;
-    }
-
-    footer a {
-      color: #cfa94a;
-      margin: 0 10px;
-      text-decoration: underline;
-    }
-
-    .legal-links {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 10px;
-margin-top: 20px;
-}
-
-.legal-links a {
-display: block;
-text-decoration: underline;
-color: #d4af37;
-font-size: 14px
-
-    @media (min-width: 768px) {
-      .centered-list li {
-        margin-left: 0px;
-        margin-right: 80px;
-      }
-
-      .services-container {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-
-      .pack {
-        width: 30%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="container">
     <img src="horus.png" alt="Logo L'Ombre de ma lumière" class="logo" />
+
     <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
     <nav id="mainMenu">
       <a href="#services">Services Premium</a>
       <a href="#confiance">Pourquoi me faire confiance ?</a>
-      <a href="temoignages.html">Témoignages</a>
       <a href="#contact">Contact</a>
     </nav>
 
     <section>
       <h1>L'Ombre de ma lumière</h1>
-      <p style="text-align:center;">Service professionnel dédié aux entrepreneurs</p>
+      <p class="intro">Service professionnel dédié aux entrepreneurs</p>
 
       <h1>Ce que je propose</h1>
-      <p style="text-align:center;">Déléguez ce qui vous ralentit pour rester concentré sur l’essentiel :</p>
+      <p class="intro">Déléguez ce qui vous ralentit pour rester concentré sur l’essentiel :</p>
+
       <img src="debordee.png" alt="Illustration personne débordée" class="fade-in-image" />
+
       <ul class="centered-list">
-        <li>Gestion des emails</li>  
-    <li>Classement de documents</li>  
-    <li>Organisation & appels</li>  
-    <li>Dossiers administratifs</li>
+        <li>Gestion des emails</li>
+        <li>Classement de documents</li>
+        <li>Organisation & appels</li>
+        <li>Dossiers administratifs</li>
       </ul>
     </section>
 
@@ -306,25 +43,27 @@ font-size: 14px
         <div class="pack">
           <h3>Pack Essentiel</h3>
           <ul>
-             <li>5h/mois d'assistance</li>  
-        <li>Emails + documents</li>  
-        <li>1 appel stratégique</li>
+            <li>5h/mois d'assistance</li>
+            <li>Emails + documents</li>
+            <li>1 appel stratégique</li>
           </ul>
         </div>
+
         <div class="pack">
           <h3>Pack Pro</h3>
           <ul>
-            <li>10h/mois</li>  
-        <li>Appels entrants + relances</li>  
-        <li>Suivi WhatsApp</li>
+            <li>10h/mois</li>
+            <li>Appels entrants + relances</li>
+            <li>Suivi WhatsApp</li>
           </ul>
         </div>
+
         <div class="pack">
           <h3>Pack Premium</h3>
           <ul>
-             <li>20h/mois + priorisation</li>  
-        <li>Tâches personnelles</li>  
-        <li>Rapport PDF</li>
+            <li>20h/mois + priorisation</li>
+            <li>Tâches personnelles</li>
+            <li>Rapport PDF</li>
           </ul>
         </div>
       </div>
@@ -332,36 +71,32 @@ font-size: 14px
 
     <section id="confiance">
       <h2>Pourquoi me faire confiance ?</h2>
-      <img src="confiance.png" alt="Femme de confiance souriante" class="illustration" />
+      <img src="confiance.png" alt="Femme de confiance" class="illustration" />
       <ul class="centered-list">
-        <li>+7 ans d’expérience</li>  
-    <li>Approche humaine & pro</li>  
-    <li>Confidentialité garantie</li>  
-    <li>Communication fluide</li>
+        <li>+7 ans d’expérience</li>
+        <li>Approche humaine & pro</li>
+        <li>Confidentialité garantie</li>
+        <li>Communication fluide</li>
       </ul>
     </section>
 
     <footer id="contact">
-      <p><a href="https://wa.me/33749461434" target="_blank">
-          <img src="whatsapp-gold.png" alt="WhatsApp" style="height: 20px; vertical-align: middle; margin-right: 8px;">
-          Contact
-        </a></p>
-        <p><strong>Email :</strong>contact@eternaglow.com</p>
-      <p style="font-size: 0.9em; margin-top: 1em;">
-        <a href="#"mentions-legales.html">Mentions légales</a>
-        <a href="#"condition-generale.html">Conditions générales</a>
-        <a href="#"politique-confidentialite.html">Politique de confidentialité</a>
+      <p>
+        <a href="https://wa.me/33749461434" target="_blank" class="contact-link">📞 Contact</a>
       </p>
-       <p style="margin-top: 20px; font-size: 13px;">  
-    Site créé avec 💻 <a href="#">EternaWeb</a> – Mini-site express  
-       </p>
+      <p><strong>Email :</strong> contact@eternaglow.com</p>
+      <div class="legal-links">
+        <a href="#">Mentions légales</a>
+        <a href="#">Conditions générales</a>
+        <a href="#">Politique de confidentialité</a>
+      </div>
+      <p class="credit">Site créé avec 💻 <a href="#">EternaWeb</a> – Mini-site express</p>
     </footer>
   </div>
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById('mainMenu');
-      menu.classList.toggle('show');
+      document.getElementById('mainMenu').classList.toggle('show');
     }
   </script>
 </body>
